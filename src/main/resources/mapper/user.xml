@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fgs.fgscashbook.mapper.UserMapper">
+    <sql id="tableColumns">
+        id,
+        user,
+        nickname,
+        photo,
+        role_id,
+        type
+   </sql>
+    <resultMap id="BaseResultMap" type="com.fgs.fgscashbook.po.UserPo">
+        <result column="user" jdbcType="INTEGER" property="user"/>
+        <result column="nickname" jdbcType="INTEGER" property="nickname"/>
+        <result column="photo" jdbcType="INTEGER" property="photo"/>
+        <result column="role_id" jdbcType="INTEGER" property="roleId"/>
+        <result column="type" jdbcType="INTEGER" property="type"/>
+    </resultMap>
+    <select id="find" resultMap="BaseResultMap">
+        select
+            user,
+            nickname,
+            photo,
+            role_id,
+            type
+        from fgs_user
+        where id = #{id}
+    </select>
+
+    <insert id="ins"></insert>
+    <update id="update"></update>
+    <update id="del"></update>
+</mapper>
