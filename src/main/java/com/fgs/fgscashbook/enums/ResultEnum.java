@@ -27,6 +27,14 @@ public enum ResultEnum {
     COUPON_TITLE_NULL_ERROR(1008, "COUPON_TITLE_NULL_ERROR", "标题不能为空"),
     NOT_NULL(1009,"NOT_NULL","参数不能为空"),
 
+
+    /**
+     * 业务错误
+     */
+    SYS_ERROR(5000, "SYS_ERROR", "[系统异常]"),
+    NOT_FOUND(5001, "NOT_FOUND", "数据未找到"),
+    ADD_FAIL(5002, "ADD_FAIL", "数据添加失败"),
+
     /**
      * 系统错误99xx
      */
