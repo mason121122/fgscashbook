@@ -30,7 +30,7 @@ public class Swagger2 {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("集成Swagger2")
+                .title("fgscashbook")
                 .description("")
                 .termsOfServiceUrl("")
                 .contact("weangfeng")
