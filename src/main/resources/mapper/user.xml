@@ -9,20 +9,17 @@
         role_id,
         type
    </sql>
-    <resultMap id="BaseResultMap" type="com.fgs.fgscashbook.po.UserPo">
-        <result column="user" jdbcType="INTEGER" property="user"/>
-        <result column="nickname" jdbcType="INTEGER" property="nickname"/>
-        <result column="photo" jdbcType="INTEGER" property="photo"/>
+    <resultMap id="BaseResultMap" type="com.fgs.fgscashbook.bo.UserBo">
+        <result column="id" jdbcType="INTEGER" property="id"/>
+        <result column="user" jdbcType="VARCHAR" property="user"/>
+        <result column="nickname" jdbcType="VARCHAR" property="nickname"/>
+        <result column="photo" jdbcType="VARCHAR" property="photo"/>
         <result column="role_id" jdbcType="INTEGER" property="roleId"/>
         <result column="type" jdbcType="INTEGER" property="type"/>
     </resultMap>
     <select id="find" resultMap="BaseResultMap">
         select
-            user,
-            nickname,
-            photo,
-            role_id,
-            type
+           *
         from fgs_user
         where id = #{id}
     </select>

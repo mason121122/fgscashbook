@@ -7,11 +7,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserMapper {
 
-    public UserBo find(Integer id);
+    UserBo find(Integer id);
 
-    public UserBo del(UserPo userPo);
+    UserBo del(UserPo userPo);
 
-    public UserBo update(UserPo userPo);
+    UserBo update(UserPo userPo);
 
-    public UserBo ins(UserPo userPo);
+    UserBo ins(UserPo userPo);
 }

@@ -19,3 +19,15 @@ logging:
         mapper: debug
 swagger:
   enable: true
+
+management:  #actuator
+  server:
+    port: 8081
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
+    enabled-by-default: false # 启用所有端口
+
+

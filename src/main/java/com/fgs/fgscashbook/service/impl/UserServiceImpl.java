@@ -30,8 +30,9 @@ public class UserServiceImpl extends AbstractBaseDomain implements UserService {
 
     @Override
     public UserVo find(Integer id){
+        userMapper.find(id);
         UserVo userVo = new UserVo();
-        BeanCopierUtils.copyProperties(userMapper.find(id),UserVo.class);
+        BeanCopierUtils.copyProperties(userMapper.find(id),userVo);
         return userVo;
     }
 

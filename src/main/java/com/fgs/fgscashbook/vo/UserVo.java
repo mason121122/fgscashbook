@@ -14,6 +14,7 @@ import javax.validation.constraints.NotNull;
 @Data
 public class UserVo {
     @ApiModelProperty(value = "id")
+    @NotNull(message = "NOT_NULL")
     private Integer id;
 
     @ApiModelProperty(value = "账户名")
