@@ -2,6 +2,8 @@ package com.fgs.fgscashbook.po;
 
 import lombok.Data;
 
+import java.util.Date;
+
 /**
  * @author wangfeng
  * @NAME: UserPo
@@ -17,8 +19,8 @@ public class UserPo {
     private Integer roleId;
     private String remark;
     private Integer type;
-    private Data creationTime;
+    private Date creationTime;
     private String creationBy;
-    private Data updateTime;
+    private Date updateTime;
     private String updateBy;
 }

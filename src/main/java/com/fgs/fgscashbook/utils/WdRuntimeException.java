@@ -2,7 +2,7 @@ package com.fgs.fgscashbook.utils;
 
 /**
  * @author wangfeng
- * @NAME: UserVo
+ * @NAME: WdRuntimeException
  * @DATE: 2020/9/7
  **/
 public class WdRuntimeException extends RuntimeException{

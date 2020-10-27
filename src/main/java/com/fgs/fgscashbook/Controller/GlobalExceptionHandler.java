@@ -28,7 +28,7 @@ import java.util.Set;
 
 /**
  * @author wangfeng
- * @NAME: UserVo
+ * @NAME: GlobalExceptionHandler
  * @DATE: 2020/9/7
  **/
 @RestController

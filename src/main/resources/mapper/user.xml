@@ -24,7 +24,26 @@
         where id = #{id}
     </select>
 
-    <insert id="ins"></insert>
+    <insert id="ins" parameterType="com.fgs.fgscashbook.po.UserPo">
+        INSERT IGNORE INTO fgs_user
+        (
+        user,
+        nickname,
+        photo,
+        role_id,
+        type
+        )
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (
+            #{item.user},
+            #{item.nickname},
+            #{item.photo},
+            #{item.roleId},
+            #{item.type}
+            )
+        </foreach>
+    </insert>
     <update id="update"></update>
     <update id="del"></update>
 </mapper>
