@@ -16,7 +16,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
-public class test {
+public class HttpClint {
     public static final int connectionRequestTimeout = 2 * 1000;
     public static final int connectTimeout = 3 * 1000;
     public static final int socketTimeOut = 10 * 1000;
