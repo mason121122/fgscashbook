@@ -1,20 +1,15 @@
 package com.fgs.fgscashbook;
 
 
-import com.csvreader.CsvWriter;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 
-import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 
 public class HttpClint {
     public static final int connectionRequestTimeout = 2 * 1000;

@@ -126,7 +126,7 @@ public class ESUtil {
            */
             //3、发送请求
             // 同步请求
-            BulkResponse bulkResponse = client.bulk(request,RequestOptions.DEFAULT);
+            BulkResponse bulkResponse = client.bulk(request, RequestOptions.DEFAULT);
             //4、处理响应
             if (bulkResponse != null) {
                 for (BulkItemResponse bulkItemResponse : bulkResponse) {

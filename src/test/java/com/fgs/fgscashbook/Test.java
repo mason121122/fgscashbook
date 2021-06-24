@@ -1,40 +1,24 @@
 package com.fgs.fgscashbook;
 
 
-import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.fgs.fgscashbook.support.BsRuntimeException;
-import com.fgs.fgscashbook.vo.UserVo;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.catalina.User;
-import org.apache.http.Header;
 import org.apache.http.HttpEntity;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.ContentType;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.entity.mime.MultipartEntityBuilder;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.params.HttpParams;
-import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
-import springfox.documentation.spring.web.json.Json;
 
-import javax.xml.stream.StreamFilter;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.*;
-import java.util.stream.Collectors;
+import java.util.Map;
 
 @Slf4j
 public class Test {
@@ -68,14 +52,14 @@ public class Test {
         uploadFile.setEntity(multipart);
         CloseableHttpResponse response = httpClient.execute(uploadFile);
         HttpEntity responseEntity = response.getEntity();
-        Map<String , Object> sResponse=JSONObject.parseObject(EntityUtils.toString(responseEntity, "UTF-8"));
+        Map<String, Object> sResponse = JSONObject.parseObject(EntityUtils.toString(responseEntity, "UTF-8"));
         if (null != response) {
             response.getEntity().getContent().close();
         }
-        if (response == null || response.getStatusLine ().getStatusCode() != 200) {
+        if (response == null || response.getStatusLine().getStatusCode() != 200) {
             throw new BsRuntimeException("推送机器人消息异常");
         }
-        System.out.println("Post 返回结果"+sResponse.get("media_id"));
+        System.out.println("Post 返回结果" + sResponse.get("media_id"));
 //        HttpClient httpclient = createHttpClient();
 //        Map<String , Object > map = new HashMap<>();
 //        Map<String,String> map1 = new HashMap<>();

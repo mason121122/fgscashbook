@@ -6,8 +6,6 @@ import com.csvreader.CsvWriter;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CsvDemo {
 
@@ -30,7 +28,7 @@ public class CsvDemo {
                 String record = reader.getRawRecord().trim();
 
                 String[] data = record.split(",");
-                if(data.length == 0){
+                if (data.length == 0) {
                     System.out.println("空");
                     continue;
                 }
@@ -71,15 +69,15 @@ public class CsvDemo {
         }
     }
 
-    public void newFile(){
+    public void newFile() {
         char separator = ',';
         CsvWriter writer = null;
         FileOutputStream out = null;
         try {
             out = new FileOutputStream("E:\\CsvCreater.csv", true);
-            String[] q = {"广场id","广场名称","对接平台","商圈id","商圈名称"};
-            String[] w = {"111","广场测试名称","1","12333","商圈测试"};
-            String[] e = {"222","广场测试名称2","2","23455","商圈测试2"};
+            String[] q = {"广场id", "广场名称", "对接平台", "商圈id", "商圈名称"};
+            String[] w = {"111", "广场测试名称", "1", "12333", "商圈测试"};
+            String[] e = {"222", "广场测试名称2", "2", "23455", "商圈测试2"};
             String[] r = {"222"};
             writer = new CsvWriter(out, separator, Charset.forName("GBK"));
             writer.writeRecord(q);
